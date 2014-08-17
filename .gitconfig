@@ -1,0 +1,28 @@
+[user]
+	name = Paul Grant
+	email = home.paul.grant@gmail.com
+[color]
+	ui = auto
+[alias]
+lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d %C(reset)' --abbrev-commit --date=relative
+lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+lg = !"git lg1"
+co = checkout
+# Log display from screencast, with train tracks.
+lg3 = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+# Alternate log display from Scott Chacon
+lg4 = log --pretty=oneline --abbrev-commit --graph --decorate
+co = checkout
+br = branch
+stat = status
+unadd = reset HEAD
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	cmd = /home/grantp/bin/git-diff-wrapper.sh
+#[url "git://anongit.kde.org/"]
+#     insteadOf = kde:
+#[url "git@git.kde.org:"]
+#     pushInsteadOf = kde:
+[url "http://anongit.kde.org/"]
+     insteadOf = kde:
